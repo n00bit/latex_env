@@ -7,7 +7,6 @@ site 'http://community.opscode.com/api/v1'
 
 cookbook 'chef-client'
 
-cookbook "apache2"
 cookbook "apt"
 cookbook "build-essential"
 cookbook "git"
@@ -16,9 +15,11 @@ cookbook "mysql"
 cookbook "nginx"
 cookbook "openssl"
 cookbook "php"
+cookbook "php-fpm"
 cookbook "postfix"
 cookbook "postgresql"
 cookbook "python"
+cookbook "user"
 cookbook "varnish"
 cookbook "zsh"
 
@@ -39,5 +40,13 @@ cookbook 'phpmyadmin',
   :ref => 'master'
 
 cookbook 'phppgadmin',
-  :git => 'git://github.com/arnebrasseur/chef-phppgadmin.git', 
+  :git => 'git://github.com/arnebrasseur/chef-phppgadmin.git',
+  :ref => 'master'
+
+cookbook 'webapp',
+  :git => 'git@github.com:goruha/chef-webapp.git',
+  :ref => 'develop'
+
+cookbook 'apache2',
+  :git => 'git@github.com:goruha/apache2.git',
   :ref => 'master'
