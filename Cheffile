@@ -22,6 +22,7 @@ cookbook "python"
 cookbook "user"
 cookbook "varnish"
 cookbook "zsh"
+cookbook "latex"
 
 cookbook 'drush',
   :git => 'https://github.com/vasilykraev/chef-drush.git',
