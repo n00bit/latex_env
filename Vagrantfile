@@ -29,7 +29,7 @@ Vagrant::Config.run do |config|
   end
   
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+    chef.cookbooks_path = ["cookbooks"]
     chef.roles_path = "roles"
 #    chef.data_bags_path = "data_bags"
 

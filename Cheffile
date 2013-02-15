@@ -3,8 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
-site 'http://community.opscode.com/api/v1'
-
 cookbook 'chef-client'
 
 cookbook "apt"
@@ -22,7 +20,14 @@ cookbook "python"
 cookbook "user"
 cookbook "varnish"
 cookbook "zsh"
-cookbook "latex"
+
+cookbook "latex",
+  :git => 'https://github.com/goruha/chef-latex.git',
+  :ref => 'master'
+
+cookbook "latex-disser",
+  :git => 'https://github.com/goruha/chef-latex-disser.git',
+  :ref => 'master'
 
 cookbook 'drush',
   :git => 'https://github.com/vasilykraev/chef-drush.git',

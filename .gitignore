@@ -5,3 +5,6 @@ Gemfile.lock
 cookbooks/
 .idea
 tmp
+*.aux
+*.log
+*.pdf
