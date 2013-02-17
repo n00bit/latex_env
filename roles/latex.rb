@@ -6,6 +6,6 @@ run_list(
 )
 default_attributes(
     "latex" => {
-      "packages" => ["biblatex", " texlive-latex-base", "texlive-lang-cyrillic"]
+      "packages" => ["biblatex", " texlive-latex-base", "texlive-lang-cyrillic", "texlive-latex-extra"]
     }
 )
