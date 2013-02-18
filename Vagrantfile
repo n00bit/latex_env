@@ -4,8 +4,8 @@ Vagrant::Config.run do |config|
 
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-
-  # config.vm.boot_mode = :gui
+  gui = true
+  config.vm.boot_mode = :gui
   
   config.vm.customize ["modifyvm", :id, "--memory", "512"]
 
@@ -39,6 +39,9 @@ Vagrant::Config.run do |config|
       # install make & mc, apt
       chef.add_recipe "platform_packages::data_bag"
       chef.add_recipe "apt"
+      if gui 
+       chef.add_role "gui_xfce"
+      end
 
       # lamp/nginx & drupal
       chef.add_role "latex"

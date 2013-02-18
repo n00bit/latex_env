@@ -21,6 +21,10 @@ cookbook "user"
 cookbook "varnish"
 cookbook "zsh"
 
+cookbook "xfce4",
+  :git => 'https://github.com/phlipper/chef-xfce4.git',
+  :ref => 'master'
+
 cookbook "latex",
   :git => 'https://github.com/goruha/chef-latex.git',
   :ref => 'master'

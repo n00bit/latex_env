@@ -1,0 +1,117 @@
+\documentclass[10pt,pdf,aspectratio=169]{beamer}
+\usepackage[T2A]{fontenc}       %поддержка кириллицы
+\usepackage[utf8]{inputenc}
+\graphicspath{{./pictures/}{/home/eddy/}}
+\usetheme{Boadilla}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+\setbeamercovered{transparent}
+
+\setbeamercolor{color1}{bg=blue!90!black,fg=white}
+\setbeamercolor{normal text}{bg=black,fg=cyan}
+\setbeamercolor{frametitle}{fg=red,bg=cyan}
+
+\title[короткое название]{Длинное название презентации}
+\subtitle[кор. подназв.]{Длинное подназвание}
+\author[А.В. Тор]{Арсений Владимирович Тор}
+\institute[НИИХЗ]{НИИ Химии Земли\\
+	{\tiny Лаборатория радионуклидного анализа}\\
+}
+\date[год]{Место проведения конференции, год.}
+
+\begin{document}
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+\begin{frame}\frametitle{План}
+\tableofcontents
+\end{frame}
+
+\section{Секция 1}
+\subsection{Подсекция 1}
+\begin{frame}
+	\transwipe
+	\frametitle{Влияние чего-то на что-то}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\begin{block}{Примеры видимости}
+			\onslide<1>{Непрозрачный на 1}\par
+			\only<2>{Появится лишь на 2}\par
+			\visible<3>{Лишь на 3}\par
+			\invisible<4>{на 4 пусто}\par
+			\alt<2>{слайд 2}{что-то явно не слайд 2}\par
+			\temporal<2>{первый}{второй}{третий (с копейками)}\par
+			\uncover<3>{нет меня, я --- 3}\par
+		\end{block}
+		\column{0.6\textwidth}
+		\only<1,4>{
+			\begin{block}{Блогозаголовок}
+				А вот вам!
+			\end{block}
+		}
+		\textbf{Нумерованный список с оверлеями}:
+		\begin{itemize}
+			\item<1-> Этот пункт будет показан всегда
+			\item<2-> Этот -- начиная со второго кадра
+			\item<1,3> Этот -- на первом и третьем кадрах
+		\end{itemize}
+	\end{columns}
+\end{frame}
+
+\subsection{Подсекция 2}
+\begin{frame}
+	\frametitle{Влияние кого-то на что-то}
+	\begin{block}{формула}
+		Содержимое блока, дурацкая формула:
+		$$\int_1^2\sin x\,dx$$
+		А дальше - будем показывать формулу по кускам. Эдакая порнография эпохи "зухелей"...
+		$$
+		\sin^2x\pause+\cos^2x\pause=1
+		$$
+	\end{block}
+\end{frame}
+
+\section{Секция 2}
+\subsection{подсекция}
+\begin{frame}
+	\frametitle{Когда уже эта презентация кончится?}
+	\only<1-3>{
+		\begin{beamercolorbox}[shadow=true, rounded=true]{color1}
+			С первого по третий --- рассчитайсь!
+		\end{beamercolorbox}
+	}
+	\only<2->{
+		\begin{block}{}
+			Со второго кадра я здесь. Но не жадничаю. Место изначально не занимаю.
+		\end{block}
+	}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\onslide<3>{
+			\begin{alertblock}{Ох уж эти объявления!}
+				Не делайте такие презентации! Больше 80 слов на слайд | уйма свистоперделок |
+вырвиглазные цвета | множество блоков == смерть!
+			\end{alertblock}
+		}
+		\column{0.5\textwidth}
+		\onslide<3>{
+			\begin{exampleblock}{Пример}
+				А меня долго ждали. Но не показывали.
+			\end{exampleblock}
+		}
+	\end{columns}
+\end{frame}
+\newcount\ooo
+\newdimen\offset
+\begin{frame}
+	\animate<2-20>
+	\animatevalue<1-20>{\ooo}{100}{0}
+	\animatevalue<1-20>{\offset}{0cm}{0.7\textheight}
+	\vbox to \textheight{
+	\frametitle{Вот и сказочке конец, а кто слушал --- молодец!}
+	\begin{colormixin}{\the\ooo!averagebackgroundcolor}
+	\vskip\offset\centering{Спасибо за внимание!}
+	\end{colormixin}}
+	\transduration{0.05}
+\end{frame}
+\end{document}
