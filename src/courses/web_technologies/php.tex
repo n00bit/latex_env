@@ -1,0 +1,41 @@
+\documentclass[10pt]{beamer}
+\usepackage[T2A]{fontenc}       %поддержка кириллицы
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{scrextend}
+\changefontsizes{16pt}
+\usepackage{listings}
+\usepackage{xcolor}
+\graphicspath{{./images/}}
+\usetheme{default}
+\usecolortheme{crane}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+\setbeamercovered{transparent}
+\definecolor{name}{rgb}{0.5,0.5,0.5}
+\include{configs/listings/php}
+
+\title[Web]{Web программирование}
+\subtitle[PHP]{PHP - введение}
+\author[Родионов И.Н.]{Игорь Родионов}
+\institute[ОмГТУ ИВТ]{Омский Государственный Технический Университет\\
+	{\tiny кафедра Информатики и вычислительной техники}\\
+}
+\date[2013]{ОмГТУ, 2013.}
+
+\begin{document}
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+\include{pages/php_rasmus_lerdof}
+\include{pages/php_andi_gutmans_zeev_suraski}
+\include{pages/php_zend}
+\include{pages/php_fields_of_application}
+\include{pages/php_plus}
+\include{pages/php_echo}
+\include{pages/php_minus_dynamic_types}
+\include{pages/php_minus_easy}
+\include{pages/php_minus_other}
+\end{document}
+
