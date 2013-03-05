@@ -4,8 +4,12 @@ Vagrant::Config.run do |config|
 
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-  gui = true
-  config.vm.boot_mode = :gui
+
+  gui = false
+
+  if gui 
+    config.vm.boot_mode = :gui
+  end
   
   config.vm.customize ["modifyvm", :id, "--memory", "512"]
 
@@ -19,7 +23,7 @@ Vagrant::Config.run do |config|
   end
 
   if network == "host" 
-    config.vm.network :hostonly, "33.33.33.10"
+    config.vm.network :hostonly, "33.33.33.11"
     config.vm.share_folder "v-data", "/vagrant", ".", :nfs => nfsd
   end
 
@@ -41,6 +45,7 @@ Vagrant::Config.run do |config|
       chef.add_recipe "apt"
       if gui 
        chef.add_role "gui_xfce"
+       chef.add_role "latex_gui"
       end
 
       # lamp/nginx & drupal
