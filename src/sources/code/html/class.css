@@ -1,0 +1,24 @@
+div {
+  background-color: red;
+}
+
+body div.devop#div-0 {
+  background-color: yellow;
+}
+
+div.devop#div-0 {
+  background-color: white;
+}
+
+
+.devop {
+  background-color: green;
+}
+
+ul :first-child {
+  background-color: blue;
+}
+
+ul:hover {
+  background-color: black;
+}
