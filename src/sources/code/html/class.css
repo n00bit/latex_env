@@ -2,17 +2,16 @@ div {
   background-color: red;
 }
 
-body div.devop#div-0 {
-  background-color: yellow;
+.devop {
+  background-color: green;
 }
 
 div.devop#div-0 {
   background-color: white;
 }
 
-
-.devop {
-  background-color: green;
+body div.devop#div-0 {
+  background-color: yellow;
 }
 
 ul :first-child {
