@@ -7,7 +7,6 @@ cookbooks/
 tmp
 *.aux
 *.log
-*.pdf
 *.nav
 *.out
 *.vrb

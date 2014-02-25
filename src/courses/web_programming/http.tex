@@ -1,0 +1,50 @@
+\documentclass[10pt]{beamer}
+\usepackage[T2A]{fontenc}       %поддержка кириллицы
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{scrextend}
+\changefontsizes{16pt}
+\usepackage{listings}
+\usepackage{xcolor}
+\graphicspath{{./images/}}
+\usetheme{default}
+\usecolortheme{crane}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+\setbeamercovered{transparent}
+\definecolor{name}{rgb}{0.5,0.5,0.5}
+\include{sources/configs/listings/php}
+
+\title[Web]{Web программирование}
+\subtitle[HTTP]{HyperText Transfer Protocol}
+\author[Родионов И.Н.]{Игорь Родионов}
+\institute[ОмГТУ ИВТ]{Омский Государственный Технический Университет\\
+	{\tiny кафедра Информатики и вычислительной техники}\\
+}
+\date[2014]{ОмГТУ, 2014.}
+
+\begin{document}
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+\include{sources/pages/http/common}
+\include{sources/pages/http/request}
+\include{sources/pages/http/methods}
+\include{sources/pages/http/methods_save}
+\include{sources/pages/http/methods_idempotent} % check english wikipedia
+\include{sources/pages/http/request}
+\include{sources/pages/http/response}
+\include{sources/pages/http/response_status_codes}
+\include{sources/pages/http/response}
+\include{sources/pages/http/headers}
+\include{sources/pages/http/pros_cons}
+\include{sources/pages/http/stateless}
+\include{sources/pages/http/cookies}
+\include{sources/pages/http/cookies_headers}
+\include{sources/pages/http/cookies_limits}
+\include{sources/pages/http/sessions}
+\include{sources/pages/http/demos}
+\include{sources/pages/common/questions}
+\end{document}
+
