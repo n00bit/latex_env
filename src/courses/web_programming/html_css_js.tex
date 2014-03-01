@@ -1,21 +1,5 @@
 \documentclass[10pt]{beamer}
-\usepackage[T2A]{fontenc}       %поддержка кириллицы
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{scrextend}
-\changefontsizes{16pt}
-\usepackage{listings}
-\usepackage{xcolor}
-\graphicspath{{./images/}}
-\usetheme{default}
-\usecolortheme{crane}
-\usefonttheme{structurebold}
-\usefonttheme[onlymath]{serif}
-\setbeamercovered{transparent}
-\definecolor{name}{rgb}{0.5,0.5,0.5}
-\include{sources/configs/listings/php}
-\include{sources/configs/listings/html}
-\include{sources/configs/listings/base}
+\input{sources/configs/listings/base}
 
 \title[Web]{Web программирование}
 \subtitle[HTML, CSS, JS]{Frontend - HTML, CSS, JS}
@@ -31,11 +15,57 @@
 \end{frame}
 
 \include{sources/pages/html/tag_structure}
-\include{sources/pages/html/html_structure}
+\include{sources/pages/html/document_structure}
+\include{sources/pages/html/html_xhtml}
+
+\include{sources/pages/common/questions}
+
 \include{sources/pages/html/tags_types}
 \include{sources/pages/html/box_model}
+\include{sources/pages/html/box_model_issues}
 \include{sources/pages/html/tags_attributes}
-\include{sources/pages/html/tags_attributes}
-\include{sources/pages/html/html-xhtml}
+
+\include{sources/pages/common/questions}
+
+\include{sources/pages/html/css}
+\include{sources/pages/html/css_selectors}
+\include{sources/pages/html/css_cascade_rule}
+
+\include{sources/pages/common/questions}
+
+\include{sources/pages/html/css_include}
+
+\include{sources/pages/common/questions}
+
+\include{sources/pages/html/html_layouts}
+\include{sources/pages/html/html_table}
+\include{sources/pages/html/html_iframe}
+\include{sources/pages/html/html_div}
+\include{sources/pages/html/css_positions}
+
+\include{sources/pages/common/questions}
+
+\include{sources/pages/html/js}
+\include{sources/pages/html/dom}
+\include{sources/pages/html/browser_objects}
+
+\include{sources/pages/common/questions}
+
+\include{sources/pages/html/js_include}
+\include{sources/pages/html/js_dom_manipulations}
+\include{sources/pages/html/js_dom_events}
+\include{sources/pages/html/jquery}
+\include{sources/pages/html/same_origin_policy}
+
+\include{sources/pages/common/questions}
+
+\include{sources/pages/html/html_http_request}
+\include{sources/pages/html/html_http_form}
+\include{sources/pages/html/html_http_post}
+\include{sources/pages/html/html_http_files}
+
+\include{sources/pages/common/questions}
+
+\include{sources/pages/html/additional}
 \end{document}
 

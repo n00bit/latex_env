@@ -1,0 +1,41 @@
+% Set custom colors
+\definecolor{code}{gray}{0}
+\definecolor{canvas}{gray}{0.96}
+\definecolor{comment}{rgb}{0, 0.456, 0}
+\definecolor{keyword}{rgb}{0.5, 0, 0.5}
+
+% JavaScript is not part of the listings package...
+% but thankfully this page shows how to add it:
+% http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package
+
+\lstdefinelanguage{javascript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, for, in, while, do, else, case, break},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s][\color{blue}\ttfamily]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+% Parameters for formatting code (optional, affects all code listings)
+\lstset{
+  backgroundcolor=\color{canvas},
+  basicstyle=\ttfamily\small\color{code},
+  commentstyle=\color{comment},
+  identifierstyle=\color{black},
+  keywordstyle=\color{keyword}\bfseries,
+  ndkeywordstyle=\color{keyword}\bfseries,
+  stringstyle=\color{blue}\ttfamily
+}
+
+\lstdefinestyle{jsCode} {
+   language=javascript,
+   basicstyle=\tiny\ttfamily,
+   keywordstyle=\ttfamily,
+   commentstyle=\color{gray}\ttfamily,
+   tabsize=1,
+   frame=none,
+   columns=fullflexible,
+   escapechar=| % Escape to LaTeX between |...|
+}

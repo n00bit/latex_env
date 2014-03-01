@@ -1,1 +1,19 @@
+\usepackage[T2A]{fontenc}       %поддержка кириллицы
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{scrextend}
+\changefontsizes{16pt}
+\usepackage{listings}
+\usepackage{xcolor}
+\graphicspath{{./images/}}
+\usetheme{default}
+\usecolortheme{crane}
+\usefonttheme{structurebold}
+\usefonttheme[onlymath]{serif}
+\setbeamercovered{transparent}
+\definecolor{name}{rgb}{0.5,0.5,0.5}
+\include{sources/configs/listings/php}
+\include{sources/configs/listings/html}
+\include{sources/configs/listings/css}
+\include{sources/configs/listings/javascript}
 \newcommand{\includecode}[2][c]{\lstinputlisting[caption=#2, escapechar=, style=custom#1]{#2}}

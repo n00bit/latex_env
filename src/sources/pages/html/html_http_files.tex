@@ -1,0 +1,24 @@
+\begin{frame}[fragile]
+ 	\frametitle{HTML - Form upload}
+   \lstinputlisting[style=htmlCode, basicstyle=\scriptsize]{sources/code/html/form_files.html}
+\end{frame}
+\begin{frame}[fragile]
+ 	\frametitle{HTML - Form upload}
+  \parbox{\textwidth}{
+  \tiny
+  POST /upload/file HTTP/1.1 \\
+  Content-Type: multipart/form-data; boundary=Asrf456BGe4h\newline
+  Content-Length: (суммарный объём, включая дочерние заголовки)\newline
+  Host: example.com \newline
+  \newline
+  --Asrf456BGe4h\newline
+  Content-Disposition: form-data; name="username"\newline
+  \newline
+  name\_value\newline
+  --Asrf456BGe4h\newline
+  Content-Disposition: form-data; name="attachment"; filename="horror-photo-1.jpg"\newline
+  Content-Type: image/jpeg\newline
+  \newline
+  (двоичное содержимое файла)\newline
+  }
+\end{frame}

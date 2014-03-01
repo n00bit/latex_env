@@ -1,0 +1,18 @@
+\begin{frame}{Same origin policy}
+Same origin policy — концепция безопасности для Javascript.
+Политика разрешает сценариям, c одного сайта, доступ к методам и свойствам друг друга без ограничений, но предотвращает доступ к большинству методов и свойств для страниц на разных сайтах.
+\end{frame}
+\begin{frame}{Same origin policy}
+ \begin{center}
+ \begin{itemize}
+ \scriptsize
+ \item http://www.example.com/dir/page.html - OK
+ \item http://www.example.com/dir2/other.html	 - OK
+ \item http://www.example.com:81/dir/other.html -	NOK
+ \item https://www.example.com/dir/other.html -	NOK
+ \item http://en.example.com/dir/other.html -	NOK
+ \item http://example.com/dir/other.html - NOK
+ \item http://v2.www.example.com/dir/other.html- NOK
+ \end{itemize}
+ \end{center}
+\end{frame}

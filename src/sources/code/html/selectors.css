@@ -1,0 +1,24 @@
+* {margin:0; padding:0;}
+
+p {font-family: Garamond, serif;}
+
+.note {color: red; background: yellow;}
+
+#paragraph1 {margin: 0;}
+
+a[href="http://somesite.com"] {color: red;}
+
+div#paragraph1 {color: red;}
+
+div#paragraph1 p.note {color: red;}
+
+div#paragraph1,
+div#paragraph1 p.note {color: red;}
+
+p.note > b {color: green;}
+
+h1 + p {font-size: 24pt;}
+
+a:active {color:yellow;}
+
+p::first-letter {font-size: 32px;}
