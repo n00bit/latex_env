@@ -1,0 +1,22 @@
+\begin{frame}[fragile]{Routing}
+  \begin{center}
+    \scriptsize
+    \begin{verbatim}
+http://site.com/shop/computers - категория "Компьютеры"
+http://site.com/shop/computers/23 - товар с ID = 23
+    \end{verbatim}
+        \begin{verbatim}
+'shop/category/<category:[\w_\/-]+>/<id:[\d]+>'=>'shop/show',
+'shop/category/<category:[\w_\/-]+>'=>'shop/category',
+'shop'=>'shop/index',
+        \end{verbatim}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Routing}
+  \begin{center}
+    \lstinputlisting[style=phpCode, basicstyle=\tiny]{sources/code/webapps/controller.php}
+  \end{center}
+\end{frame}
+
+
