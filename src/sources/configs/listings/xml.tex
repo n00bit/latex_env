@@ -1,0 +1,32 @@
+\lstloadlanguages{XML}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  morecomment=[s][\color{orange}]{<!--}{-->},
+  stringstyle=\color{black},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}
+}
+
+\lstdefinestyle{xmlCode}{
+  language=XML,
+  extendedchars=true,
+  belowcaptionskip=5pt,
+  xleftmargin=1.8em,
+  xrightmargin=0.5em,
+  numbers=left,
+  numberstyle=\small\ttfamily\bf,
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true,
+  breakindent=0pt,
+  emph={},
+  emphstyle=\color{red},
+  basicstyle=\small\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}

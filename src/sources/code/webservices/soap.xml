@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <getProductDetailsResponse xmlns="http://warehouse.example.com/ws">
+      <getProductDetailsResult>
+        <productID>12345</productID>
+        <productName>Bottle</productName>
+        <price>9.95</price>
+        <currency>
+          <code>840</code>
+          <alpha3>USD</alpha3>
+        </currency>
+      </getProductDetailsResult>
+    </getProductDetailsResponse>
+  </soap:Body>
+</soap:Envelope>
